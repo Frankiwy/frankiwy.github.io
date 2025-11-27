@@ -115,7 +115,7 @@ main{
 }
 
 
-main img{
+.home-img{
     max-width: 100%;
     border-radius: 1em;
     object-fit: cover;
@@ -303,21 +303,18 @@ footer{
 /* Research page */
 
 .research-container {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    flex-wrap: wrap;
+    gap: 3em;
     border-radius:  1px;
-    display: inline-block;
-    margin-bottom: 2%;
-    margin-top: 8rem;
-    margin-left: 15%;
-    margin-right: 5%;
-    width: 70vw;
-    height: auto;
     border: 1px solid black;
     background-color: rgb(242, 242, 242);
     position: relative;
-    padding: 1rem;
+    padding: 2rem;
     box-shadow: inset 0 0em 0em white,
                 0.3em 0.3em 1em rgb(200 0 0 / 60%);
-    padding-bottom: 3rem;
     opacity: 0;
     transform: translateY(30px);
     animation: movedown 0.5s linear forwards;
@@ -332,7 +329,7 @@ footer{
 }
 
 .research-container h1 {
-    font-size: clamp(4rem, 15vw, 3rem);
+    font-size: 4rem;
     font-weight: normal;
     margin-bottom: 5rem;
 }
@@ -349,7 +346,7 @@ footer{
 
 .research-container .research-activity p{
     color: rgb(128,128,128);
-    font-size: clamp(2.5rem, 8vw, 1.5rem);
+    font-size: 2.5rem;
     line-height: 1.5;
 }
 
@@ -362,7 +359,7 @@ footer{
 }
 
 .research-container .research-activity .satellite-box h3{
-    font-size: clamp(3rem, 15vw, 1.5rem);
+    font-size: 3rem;
     margin-bottom: 2%;
 }
 
@@ -419,12 +416,33 @@ footer{
 
     }
 
+    .flex-containter{
+        text-align: center;
+    
+}
+
+
+    h1{
+        font-size: 3.5rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+        color: rgb(120,120,120);
+    }
+
+
+    p { padding-left: 5px;
+        padding-right: 5px;
+        font-size:  1.8rem;
+        text-align: left;
+    }
+
 
     /* Publication page */
 
 
     .publications-container{
-        /* margin-top: 8rem; */
         width: 80%;
         margin-left: 10%;
         align-items: center;
@@ -466,7 +484,6 @@ footer{
     /* Research page */
 
     .research-container {
-        margin-top: 8rem;
         width: 80%;
         margin-left: 10%;
         align-items: center;
@@ -474,14 +491,14 @@ footer{
 
 
     .research-container h1 {
-        font-size: clamp(2rem, 15vw, 2rem);
+        font-size: 2rem;
         font-weight: normal;
         margin-bottom: 1rem;
     }
 
     .research-container .research-activity p{
         color: rgb(128,128,128);
-        font-size: clamp(1.0rem, 5vw, 1.0rem);
+        font-size: 1.0rem;
         line-height: 1.5;
     }
 
@@ -491,7 +508,7 @@ footer{
     }
 
     .research-container .research-activity .satellite-box h3{
-        font-size: clamp(1.0rem, 8vw, 1.0rem);
+        font-size: 1.0rem;
         margin-bottom: 2%;
     }
 
