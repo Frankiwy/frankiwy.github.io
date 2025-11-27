@@ -31,10 +31,10 @@ body{
     padding-bottom: 0rem;
 }
 
-main{
+/* main{
     flex-grow: 1;
 }
-
+ */
 
 /* this my class for the header bar, 
 and it is possible to design it, like colors style etc...*/
@@ -93,50 +93,87 @@ nav a:hover{
 }
 
 
-/* here I design the home class */
 
-.home {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    padding: 1rem 9% 1rem;
+/* new home */
+
+/* top right bottom left */
+
+main{
+    margin: 8em auto 3em auto;
+    width: min(1000px, 100%);
+    padding: min(2em, 15%, auto, -3em);
+    border-radius: 1em;
+}
+
+
+.flex-containter{
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 5rem;
+    flex-wrap: wrap;
+    gap: 3em;
 }
 
-.home-detail h1{
-    font-size: clamp(3.5rem, 10vw, 5.5rem);
-    margin-bottom: 1%;
-    @media (min-width: 600px) {
-        font-size: clamp(3.5rem, 10vw, 5.5rem);
-        
-    }
+
+main img{
+    max-width: 100%;
+    border-radius: 1em;
+    object-fit: cover;
+    object-position: bottom;
 }
 
-.home-detail h2{
-    display: inline-block;
-    font-size: clamp(2.5rem, 10vw, 2.5rem);
-    margin-top: +1%;
-    color: rgb(0, 0, 0);
+
+.text-container{
+    flex: 0 1 34em;
 }
 
-.home-detail h3{
-    display: inline-block;
-    font-size: clamp(2.5rem, 10vw, 2.5rem);
-    margin-bottom: +5%;
+
+h1{
+    font-size: 5.5rem;
+    margin-bottom: 1rem;
+}
+
+h2{
+    font-size: 3.0rem;
+    margin-bottom: 4rem;
     color: rgb(120,120,120);
 }
 
 
-
-.home-detail .btn-sci{
-    display: flex;
-    align-items: center;
+p{
+    margin: .75em 0 1em 0;
+    margin-bottom: 1rem;
+    font-size:  2.0rem;
 }
 
-/* download botton */
-.btn{
+
+.cta-button{
+    display: inline-flex;
+    border:  2px solid #c4342a;
+    border-radius: 10%;
+    font-size: 4rem;
+    color: #1f242d;
+    margin: 2.5rem 1.5rem; 
+    text-align: center;
+    vertical-align: middle;
+    transition: .5s;
+    padding:  .1em .05em;
+}
+
+
+.cta-button:hover{
+    background: #c4342a;
+    color: #1f242d;
+    box-shadow: 0 0 10px #c4342a;
+}
+
+
+
+
+
+
+/* REMOVED FOR NOW download botton */
+/* .btn{
     display: inline-block;
     padding: 1rem 3rem;
     background: #c4342a;
@@ -155,15 +192,15 @@ nav a:hover{
     color: #1f242d;
     box-shadow: none;
 }
+  */
 
-
-.home-detail .btn-sci .sci{
+.flex-containter .text-containter .btn-sci .sci{
     margin-left: 1%;
     margin-top: 2%;
 }
 
 
-.home-detail .btn-sci .sci a{
+.flex-containter .text-containter .btn-sci .sci a{
     display: inline-flex;
     border:  2px solid #c4342a;
     border-radius: 10%;
@@ -179,43 +216,13 @@ nav a:hover{
 }
 
 
-.home-detail .btn-sci .sci a:hover{
+.flex-containter .text-containter .btn-sci .sci a:hover{
     background: #c4342a;
     color: #1f242d;
     box-shadow: 0 0 10px #c4342a;
 }
 
 
-
-
-.home-img .img-box {
-    width: 33vw;
-    height: 31vw;
-    margin-left: 10%;
-    background: #c4342a;
-    border-radius: 50%;
-    padding: 5px;
-}
-
-
-.home-img .img-box .img-item{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background:  #F47239;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.home-img .img-box .img-item img{
-    position: relative;
-    /*top: 30px;*/
-    display: block;
-    width: 100%;
-    object-fit: cover;
-}
 
 footer{
     padding: 2%;
@@ -230,18 +237,17 @@ footer{
 /* section publication */
 
 .publications-container {
+
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    flex-wrap: wrap;
+    gap: 3em;
     border-radius:  1px;
-    display: inline-block;
-    margin-bottom: 2%;
-    margin-top: 8rem;
-    margin-left: 15%;
-    margin-right: 5%;
-    width: 70vw;
-    height: auto;
     border: 1px solid black;
     background-color: rgb(242, 242, 242);
     position: relative;
-    padding: 1%;
+    padding: 2rem;
     box-shadow: inset 0 0em 0em white,
                 0.3em 0.3em 1em rgb(200 0 0 / 60%);
     opacity: 0;
@@ -260,34 +266,28 @@ footer{
 
 /* Publication page */
 
-.publications-container h1 {
-    font-size: clamp(4rem, 15vw, 3rem);
-    font-weight: normal;
-    margin-bottom: 2.5rem;
+.publications-container .pub-title h1 {
+    font-size: 4.5rem;
+
 }
 
-.publications-container p {
-    font-size: clamp(1.8rem, 5vw, 1.0rem);
-    margin-bottom: 1rem;
-    padding-left: 1.0%;
+.publications-container .pub-title p {
+    font-size: 1.8rem;
+    padding-top: .5rem;
     color: rgb(100,100,100);
-    
 }
-.publications-container .journals , .publications-container .conferenceProc {
-    padding-left: 1.0%;
 
-}
 
 
 .publications-container .journals h2, .publications-container .conferenceProc h2{
-    font-size: clamp(2.5rem, 8vw, 1.5rem);
+    font-size: 2.5rem;
     margin-bottom: 2rem;
     margin-top: 2rem;
     font-weight: normal;
 }
 
 .publications-container .journals ul, .publications-container .conferenceProc ul{
-    padding-left: .5%;
+    padding-left: .5rem;
     color: rgb(100,100,100);
 
 }
@@ -420,43 +420,11 @@ footer{
     }
 
 
-
-    .home {
-        position: absolute;
-        width: 100%;
-        padding: 1rem;
-        align-items: center;
-        gap: 1rem;
-    }
-
-    .home-detail h1{
-        font-size: clamp(2.5rem, 10vw, 2.5rem);
-        margin-bottom: 5%;
-        padding-top: 10%;
-    }
-
-    .home-detail h2{
-        display: inline-block;
-        font-size: clamp(1.5rem, 10vw, 1.5rem);
-        margin-top: +1%;
-        color: rgb(0, 0, 0);
-    }
-
-    .home-detail h3{
-        display: inline-block;
-        font-size: clamp(2.5rem, 10vw, 2.5rem);
-        margin-bottom: +5%;
-        color: rgb(120,120,120);
-    }
-
-
-
-
     /* Publication page */
 
 
     .publications-container{
-        margin-top: 8rem;
+        /* margin-top: 8rem; */
         width: 80%;
         margin-left: 10%;
         align-items: center;
@@ -464,39 +432,35 @@ footer{
     }
 
 
-    .publications-container h1 {
-        font-size: clamp(2rem, 15vw, 2rem);
-        font-weight: normal;
+    .publications-container .pub-title h1 {
+        font-size: 2rem;
         margin-bottom: 1.5rem;
     }
 
-    .publications-container p {
-        font-size: clamp(1.0rem, 5vw, 1.0rem);
-        margin-bottom: 1rem;
-        padding-left: 1.0%;
+    .publications-container .pub-title p {
+        font-size: 1.0rem;
         color: rgb(100,100,100);
         
     }
 
 
     .publications-container .journals h2, .publications-container .conferenceProc h2{
-        font-size: clamp(1.2rem, 8vw, 1.2rem);
+        font-size: 1.5rem;
         margin-bottom: 2rem;
-        margin-top: 2rem;
+        margin-top: 0rem;
         font-weight: normal;
     }
 
     .publications-container .journals ul, .publications-container .conferenceProc ul{
-        padding-left: .5%;
+        padding-left: .1rem;
         color: rgb(100,100,100);
 
     }
 
     .publications-container .journals li, .publications-container .conferenceProc li{
         margin-bottom: 1rem;
-        font-size: clamp(1.0rem, 5vw, 1.0rem);
-        margin-left: 2rem ;
-        padding-left: -0.1%;
+        font-size: 1.0rem;
+        margin-left: 1.0rem ;
     }
 
     /* Research page */
