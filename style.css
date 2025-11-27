@@ -221,14 +221,13 @@ footer{
 
 
 
-
 /* section publication */
 
 .publications-container {
     border-radius:  1px;
     display: inline-block;
     margin-bottom: 2%;
-    margin-top: 8%;
+    margin-top: 8rem;
     margin-left: 15%;
     margin-right: 5%;
     width: 70vw;
@@ -301,7 +300,7 @@ footer{
     border-radius:  1px;
     display: inline-block;
     margin-bottom: 2%;
-    margin-top: 8%;
+    margin-top: 8rem;
     margin-left: 15%;
     margin-right: 5%;
     width: 70vw;
@@ -430,7 +429,7 @@ footer{
 
 
     .publications-container{
-        margin-top: 20%;
+        margin-top: 8rem;
         width: 80%;
         margin-left: 10%;
         align-items: center;
@@ -480,7 +479,7 @@ footer{
     /* Research page */
 
     .research-container {
-        margin-top: 20%;
+        margin-top: 8rem;
         width: 80%;
         margin-left: 10%;
         align-items: center;
@@ -518,7 +517,7 @@ footer{
     }
 
     .research-container .research-activity .satellite-box h3{
-        font-size: clamp(1.5rem, 8vw, 1.5rem);
+        font-size: clamp(1.2rem, 8vw, 1.2rem);
         margin-bottom: 2%;
     }
 
