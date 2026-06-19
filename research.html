@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charst="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1.0">
+    <title>Publications</title>
+    <!-- boxicons link -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- link to customised css -->
+    <link rel="stylesheet" href="style.css">
+    <script src="./HeaderFooterDesign.js"></script>
+</head>
+
+<body>
+    <special-header-desktop></special-header-desktop>
+    <special-header-mobile></special-header-mobile>
+    <main>
+        <section class="research-container">
+            <div class="research-activity">
+                <h1>Field of study</h1>
+                <p> 
+                    My research focuses on the remote sensing of volcanic particles 
+                    from ground- and satellite-based systems using physical-electromagnetic 
+                    models and statistical learning theory. 
+                    I mainly develop advanced algorithms for 
+                    the microphysical modelling of volcanic clouds, 
+                    observed by satellite radiometers in the Thermal-Infrared
+                     and Micro- Microwave spectrum region.  
+                    <br><br>
+                </p>
+                <p> 
+                    <a href="mailto:f.romeo@uniroma1.it" style="text-decoration: underline">Pop me a message</a> if you want to discuss about science and join me on a journey to discover volcanoes!
+                    <br><br>
+                </p>
+                
+                <div class="satellite-box">
+                    <h3>Mt. Etna (Italy) 24<sup>th</sup> Novemeber 2006 erutpion:</h3>
+                    <p>
+                        Figure 1 shows radiative transfer simulations
+                        assuming an omogeneous layer between 6 and 7 km altitudes. This 
+                        example shows simulated pure ash concentrations (mg m<SUP><i>-3</i></SUP>)
+                        for the volcanic eruption of 24.11.2006 at Etna volcano
+                        (Italy).
+                    </p>
+                    <img class= "img-sat" src="./imgs/conc.png" alt=" ">
+                    <figcaption>Figure 1: The ΔTb -Tb diagram for a volcanic ash
+                        cloud based on the split-window method. Vertical dashed 
+                        lines represent the optical depth (τ); the arched curves 
+                        represented the effective radius; the colour bar the simulated
+                        ash concentrations.
+                    </figcaption>
+
+                </div>
+
+                <div class="camera-box">
+                    <p>
+                        From the simulations (forward-modelling) it is possible 
+                        to retrieve properties of the volcanic clouds as the 
+                        ash concentration (mg m<SUP><i>-3</i></SUP>) and effective
+                        radius (μm). The two figures below show the estimated 
+                        ash concentration and effective radius for the volcanic
+                        cloud observed by the Aqua-MODIS spectro-radiometer over the 
+                        sicilian.
+                    </p>
+                    <img class= "img-camera" src="./imgs/MODISconc.png" alt="Etna Lava foutain 4th July 2024">
+                    <figcaption>Figure 2: Estimated ash concentration for 
+                        the Etna eruption of 24.11.2006.
+                    </figcaption>
+                    <img class= "img-camera" src="./imgs/MODISre.png" alt="Etna Lava foutain 4th July 2024">
+                    <figcaption>Figure 3: Estimated effective radius for 
+                        the Etna eruption of 24.11.2006.
+                    </figcaption>
+                </div>
+
+
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        &copy; <script> document.write(new Date().getFullYear()) </script>  by Francesco Romeo
+    </footer>
+</body>
+
+
+
+
+
+
+
+</html>
