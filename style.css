@@ -1,0 +1,565 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:whgt@300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+}
+
+/* define global colour variables */
+
+html{
+    font-size: 62.5%;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: relative;
+    background: #F47239;
+    background: linear-gradient(180deg, rgba(244, 114, 57, 1) 0%, rgba(254, 192, 110, 1) 50%, rgba(254, 222, 181, 1) 100% 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-bottom: 0rem;
+}
+
+/* main{
+    flex-grow: 1;
+}
+ */
+
+/* this my class for the header bar, 
+and it is possible to design it, like colors style etc...*/
+
+.mobile-header{
+    display: none;
+}
+
+.desktop-header{
+    position: absolute;
+    top: 2%;
+    width: 100%;
+    padding: 0rem 2rem;
+    /* background: gray; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    visibility: hidden;
+    opacity: 0;
+    animation: show-content 1.0s linear forwards;
+}
+
+
+@keyframes show-content{
+    100% {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+
+nav a {
+    font-size: 2.5rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 200;
+    text-align: center;
+    padding-left: 3rem;
+    transition: .5s;
+}
+
+nav a:focus {
+    color: black;
+}
+
+nav a:hover{
+    color: rgb(196, 52, 42)
+
+}
+
+
+#menu-icon{
+    font-size: 4rem;
+    display: none;
+}
+
+
+
+/* new home */
+
+/* top right bottom left */
+
+main{
+    margin: 8em auto 3em auto;
+    width: min(1000px, 100%);
+    padding: min(2em, 15%, auto, -3em);
+    border-radius: 1em;
+}
+
+
+.flex-containter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3em;
+}
+
+
+.home-img{
+    max-width: 100%;
+    border-radius: 1em;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+
+.text-container{
+    flex: 0 1 34em;
+}
+
+
+h1{
+    font-size: 5.5rem;
+    margin-bottom: 1rem;
+}
+
+h2{
+    font-size: 3.0rem;
+    margin-bottom: 4rem;
+    color: rgb(120,120,120);
+}
+
+
+p{
+    margin: .75em 0.75em 1em 0;
+    margin-bottom: 1rem;
+    font-size:  1.5rem;
+    text-align: justify;
+}
+
+
+.cta-button{
+    display: inline-flex;
+    border:  2px solid #c4342a;
+    border-radius: 10%;
+    font-size: 4rem;
+    color: #1f242d;
+    margin: 2.5rem 1.5rem; 
+    text-align: center;
+    vertical-align: middle;
+    transition: .5s;
+    padding:  .1em .05em;
+}
+
+
+.cta-button:hover{
+    background: #c4342a;
+    color: #1f242d;
+    box-shadow: 0 0 10px #c4342a;
+}
+
+
+
+
+
+
+/* REMOVED FOR NOW download botton */
+/* .btn{
+    display: inline-block;
+    padding: 1rem 3rem;
+    background: #c4342a;
+    border: .2rem solid #c4342a;
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem #c4342a;
+    font-size: 1.6rem;
+    color: #1f242d;
+    font-weight: 600;
+    transition: .5s;
+    margin-top: 2%;
+}
+
+.btn:hover{
+    background: transparent;
+    color: #1f242d;
+    box-shadow: none;
+}
+  */
+
+.flex-containter .text-containter .btn-sci .sci{
+    margin-left: 1%;
+    margin-top: 2%;
+}
+
+
+.flex-containter .text-containter .btn-sci .sci a{
+    display: inline-flex;
+    border:  2px solid #c4342a;
+    border-radius: 10%;
+    font-size: 5rem;
+    color: #1f242d;
+    margin: 2.5rem 1.5rem;
+    text-align: center;
+    line-height: 150px;
+    vertical-align: middle;
+    transition: .5s;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+
+.flex-containter .text-containter .btn-sci .sci a:hover{
+    background: #c4342a;
+    color: #1f242d;
+    box-shadow: 0 0 10px #c4342a;
+}
+
+
+
+footer{
+    padding: 2%;
+    /* padding-left: 10%; */
+    color: gray;
+    text-align: center;
+   
+}
+
+
+
+/* section publication */
+
+.publications-container {
+
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    flex-wrap: wrap;
+    gap: 3em;
+    border-radius:  1px;
+    border: 1px solid black;
+    background-color: rgb(242, 242, 242);
+    position: relative;
+    padding: 2rem;
+    box-shadow: inset 0 0em 0em white,
+                0.3em 0.3em 1em rgb(200 0 0 / 60%);
+    opacity: 0;
+    transform: translateY(30px);
+    animation: movedown 0.5s linear forwards;
+    /* animation-delay: .1s; */
+}
+
+@keyframes movedown{
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+/* Publication page */
+
+.publications-container .pub-title h1 {
+    font-size: 4.5rem;
+
+}
+
+.publications-container .pub-title p {
+    font-size: 1.8rem;
+    padding-top: .5rem;
+    color: rgb(100,100,100);
+}
+
+
+
+.publications-container .journals h2, .publications-container .conferenceProc h2{
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    font-weight: normal;
+}
+
+.publications-container .journals ul, .publications-container .conferenceProc ul{
+    padding-left: .5rem;
+    color: rgb(100,100,100);
+
+}
+
+.publications-container .journals li, .publications-container .conferenceProc li{
+    margin-bottom: 1rem;
+    font-size: clamp(1.8rem, 5vw, 1.0rem);
+    margin-left: 2rem ;
+    padding-left: -0.1%;
+}
+
+
+/* Research page */
+
+.research-container {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    flex-wrap: wrap;
+    gap: 3em;
+    border-radius:  1px;
+    border: 1px solid black;
+    background-color: rgb(242, 242, 242);
+    position: relative;
+    padding: 2rem;
+    box-shadow: inset 0 0em 0em white,
+                0.3em 0.3em 1em rgb(200 0 0 / 60%);
+    opacity: 0;
+    transform: translateY(30px);
+    animation: movedown 0.5s linear forwards;
+    /* animation-delay: .1s; */
+}
+
+@keyframes movedown{
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.research-container h1 {
+    font-size: 4rem;
+    font-weight: normal;
+    margin-bottom: 5rem;
+}
+
+
+
+.research-container .research-activity{
+    position: relative;
+    padding-top: 2%;
+    padding-left: 3.5%;
+    padding-right: 3.5%;
+
+}
+
+.research-container .research-activity p{
+    color: rgb(128,128,128);
+    font-size: 2.5rem;
+    line-height: 1.5;
+}
+
+
+.satellite-box{
+    width: 100%;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+
+}
+
+.research-container .research-activity .satellite-box h3{
+    font-size: 3rem;
+    margin-bottom: 2%;
+}
+
+.img-sat{
+    float: center;
+    width: 80%;
+    margin-right: 10%;
+    margin-left: 10%;
+    display: table;
+
+}
+
+.camera-box{
+    width: 100%;
+    margin-bottom: 2.5%;
+
+}
+
+.img-camera{
+    float: center;
+    width: 80%;
+    margin-right: 10%;
+    margin-left: 10%;
+    display: table;
+}
+
+
+.burger-menu, .burger-menu-btn{
+    display: none;
+}
+
+figcaption {
+  color: black;
+  font-style: italic;
+  font-size: 1.5rem;
+  text-align: justify;
+  padding-top: 2%;
+  margin: .75em 0.75em 1em 0;
+}
+
+
+
+/* MOBILE VERSION */
+
+
+@media only screen and (max-width: 600px){
+
+
+    body{
+        width: 100%;
+    }
+
+
+    .desktop-header{
+        display: none;
+    }
+
+    .mobile-header{
+        position: absolute;
+        top: 2%;
+        width: 100%;
+        padding: 0rem 2rem;
+        /* background: gray; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 100;
+
+    }
+
+    .flex-containter{
+        text-align: center;
+    
+}
+
+
+    h1{
+        font-size: 3.5rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+        color: rgb(120,120,120);
+    }
+
+
+    p { margin: .75em 0.75em 1em 0;
+        font-size:  1.1rem;
+        text-align: justify;
+        
+    }
+
+    figcaption {
+        color: black;
+        font-style: italic;
+        font-size: 0.7rem;
+        padding-top: 2%;
+        text-align: justify;
+    }
+
+
+    /* Publication page */
+
+
+    .publications-container{
+        width: 80%;
+        margin-left: 10%;
+        align-items: center;
+        
+    }
+
+
+    .publications-container .pub-title h1 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .publications-container .pub-title p {
+        font-size: 1.0rem;
+        color: rgb(100,100,100);
+        
+    }
+
+
+    .publications-container .journals h2, .publications-container .conferenceProc h2{
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        margin-top: 0rem;
+        font-weight: normal;
+    }
+
+    .publications-container .journals ul, .publications-container .conferenceProc ul{
+        padding-left: .1rem;
+        color: rgb(100,100,100);
+
+    }
+
+    .publications-container .journals li, .publications-container .conferenceProc li{
+        margin-bottom: 1rem;
+        font-size: 1.0rem;
+        margin-left: 1.0rem ;
+    }
+
+    /* Research page */
+
+    .research-container {
+        width: 80%;
+        margin-left: 10%;
+        align-items: center;
+    }
+
+
+    .research-container h1 {
+        font-size: 2rem;
+        font-weight: normal;
+        margin-bottom: 1rem;
+    }
+
+    .research-container .research-activity p{
+        color: rgb(128,128,128);
+        font-size: 1.0rem;
+        line-height: 1.5;
+    }
+
+
+    .satellite-box{
+        margin-bottom: 2rem;
+    }
+
+    .research-container .research-activity .satellite-box h3{
+        font-size: 1.0rem;
+        margin-bottom: 2%;
+    }
+
+
+    .camera-box{
+        margin-bottom: 0rem;
+    }
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
